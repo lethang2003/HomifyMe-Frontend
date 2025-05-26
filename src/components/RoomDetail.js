@@ -34,7 +34,7 @@ const RoomDetail = () => {
     const fetchRoom = async () => {
       try {
         const token = getToken();
-        const response = await axios.get(`/rooms/${roomId}`, {
+        const response = await axios.get(`https://homifyme-backend-oreg.onrender.com/rooms/${roomId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log(response.data.comments);
