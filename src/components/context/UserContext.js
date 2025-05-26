@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
   const fetchProfile = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:3000/users/profile", {
+      const response = await fetch("https://homifyme-backend-oreg.onrender.com/users/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

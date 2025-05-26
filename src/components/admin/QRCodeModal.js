@@ -15,13 +15,13 @@ const QRCodeModal = ({ isOpen, onClose, roomId, paymentAmount }) => {
   const createPayment = async () => {
     try {
       const token = getToken();
-      const userResponse = await axios.get(`http://localhost:3000/users/getId/${username}`, {
+      const userResponse = await axios.get(`https://homifyme-backend-oreg.onrender.com/users/getId/${username}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
   
       const userId = userResponse.data._id;
       const paymentResponse = await axios.post(
-        `http://localhost:3000/payments/create/${roomId}`,
+        `https://homifyme-backend-oreg.onrender.com/payments/create/${roomId}`,
         { userId, paymentAmount },
         {
           headers: { Authorization: `Bearer ${token}` },

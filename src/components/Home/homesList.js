@@ -6,9 +6,9 @@ import { FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getToken } from "../Login/app/static";
 
-const API_URL = "http://localhost:3000/rooms/available";
-const FAVORITE_API_URL = "http://localhost:3000/favorites/create/";
-const FAVORITE_LIST_URL = "http://localhost:3000/favorites"; // API lấy danh sách yêu thích
+const API_URL = "https://homifyme-backend-oreg.onrender.com/rooms/available";
+const FAVORITE_API_URL = "https://homifyme-backend-oreg.onrender.com/favorites/create/";
+const FAVORITE_LIST_URL = "https://homifyme-backend-oreg.onrender.com/favorites"; // API lấy danh sách yêu thích
 
 export function HomeList() {
   const [rooms, setRooms] = useState([]);
@@ -98,7 +98,7 @@ export function HomeList() {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/favorites/delete/${roomId}`,
+        `https://homifyme-backend-oreg.onrender.com/favorites/delete/${roomId}`,
         {
           method: "DELETE",
           headers: {

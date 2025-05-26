@@ -15,7 +15,7 @@ const ProfilePage = () => {
 
   const fetchProfile = async () => {
     try {
-      const response = await fetch("http://localhost:3000/users/profile", {
+      const response = await fetch("https://homifyme-backend-oreg.onrender.com/users/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ const ProfilePage = () => {
     formData.append("avatar", avatar);
 
     try {
-      const response = await fetch("http://localhost:3000/upload/upload-avatar-user", {
+      const response = await fetch("https://homifyme-backend-oreg.onrender.com/upload/upload-avatar-user", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${getToken()}`,

@@ -14,7 +14,7 @@ const CancelPage = () => {
   useEffect(() => {
     const checkPaymentStatus = async () => {
       try {
-        const response = await axios.post(`http://localhost:3000/payments/check/${orderCode}`, { status: 'CANCELLED' });
+        const response = await axios.post(`https://homifyme-backend-oreg.onrender.com/payments/check/${orderCode}`, { status: 'CANCELLED' });
    
         console.log("response.data.message:", response.data.message);
       } catch (error) {

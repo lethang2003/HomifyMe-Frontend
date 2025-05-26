@@ -13,7 +13,7 @@ const SuccessPage = () => {
   useEffect(() => {
     const checkPaymentStatus = async () => {
       try {
-        const response = await axios.post(`http://localhost:3000/payments/check/${orderCode}`, { status: 'SUCCESS' });
+        const response = await axios.post(`https://homifyme-backend-oreg.onrender.com/payments/check/${orderCode}`, { status: 'SUCCESS' });
         console.log(response.data.message);
       } catch (error) {
         console.error("Error checking payment status:", error);

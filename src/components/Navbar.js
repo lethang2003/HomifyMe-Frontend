@@ -45,7 +45,7 @@ const Navbar = ({ onSearch }) => {
   // Xử lý đăng xuất
   const handleLogout = async () => {
     try {
-      const response = await fetch("/users/logout", {
+      const response = await fetch("https://homifyme-backend-oreg.onrender.com/users/logout", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

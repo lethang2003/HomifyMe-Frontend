@@ -8,7 +8,7 @@ function EditProfile({ setIsEditing }) {
 
   const fetchProfile = async () => {
     try {
-      const response = await fetch("http://localhost:3000/users/profile", {
+      const response = await fetch("https://homifyme-backend-oreg.onrender.com/users/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function EditProfile({ setIsEditing }) {
 
   const handleSaveProfile = async () => {
     try {
-      const response = await fetch("http://localhost:3000/users/edit-profile", {
+      const response = await fetch("https://homifyme-backend-oreg.onrender.com/users/edit-profile", {
         method: "PUT", // Phương thức PUT để chỉnh sửa thông tin
         headers: {
           "Content-Type": "application/json",

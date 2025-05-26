@@ -17,7 +17,7 @@ function FavoriteList() {
   const fetchRooms = async () => {
     try {
       const token = getToken(); // Lấy token từ hàm getToken
-      const response = await axios.get("http://localhost:3000/favorites", {
+      const response = await axios.get("https://homifyme-backend-oreg.onrender.com/favorites", {
         headers: {
           Authorization: `Bearer ${token}`, // Đưa Bearer token vào tiêu đề
         },

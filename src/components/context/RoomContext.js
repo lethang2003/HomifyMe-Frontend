@@ -114,7 +114,7 @@ export const RoomProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://localhost:3000/rooms/sort-all",
+        "https://homifyme-backend-oreg.onrender.com/rooms/sort-all",
         {
           ward: wardName,
           district: districtName,
